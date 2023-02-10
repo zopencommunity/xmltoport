@@ -1,6 +1,6 @@
 export VERSION="0.0.28"
 export ZOPEN_TARBALL_URL="https://releases.pagure.org/xmlto/xmlto-$VERSION.tar.gz"
-export ZOPEN_TARBALL_DEPS="make zoslib"
+export ZOPEN_TARBALL_DEPS="make zoslib bash grep"
 export ZOPEN_TYPE="TARBALL"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="BASH=\"/bin/env bash\" SED=\"/bin/env sed\" GREP=\"/bin/env grep\""
 
