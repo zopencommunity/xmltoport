@@ -1,0 +1,25 @@
+diff --git a/xmlto.in b/xmlto.in
+index aed5458..66bb4fa 100755
+--- a/xmlto.in
++++ b/xmlto.in
+@@ -17,13 +17,13 @@
+ # along with this program; if not, see <http://www.gnu.org/licenses/>.
+ 
+ # Utilities that we need that aren't everywhere
+-FIND=@FIND@     # This must be GNU find (need -maxdepth)
+-MKTEMP=@MKTEMP@ # See http://www.mktemp.org if missing on your system
+-BASH=@BASH@     # GNU bash, for running the format scripts
+-GETOPT=@GETOPT@ # a getopt that supports --longoptions
+-TAIL=@TAIL@     # a tail that supports -n (posix)
+-GREP=@GREP@     # GNU grep, for searching patterns
+-SED=@SED@       # GNU sed, for modification of patterns
++FIND="@FIND@"     # This must be GNU find (need -maxdepth)
++MKTEMP="@MKTEMP@" # See http://www.mktemp.org if missing on your system
++BASH="@BASH@"     # GNU bash, for running the format scripts
++GETOPT="@GETOPT@" # a getopt that supports --longoptions
++TAIL="@TAIL@"     # a tail that supports -n (posix)
++GREP="@GREP@"     # GNU grep, for searching patterns
++SED="@SED@"      # GNU sed, for modification of patterns
+ 
+ version () {
+   echo "@PACKAGE@ version @VERSION@"
