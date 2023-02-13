@@ -1,0 +1,74 @@
+diff --git a/configure b/configure
+index d59c8e5..c2c9057 100755
+--- a/configure
++++ b/configure
+@@ -3833,7 +3833,7 @@ if ${ac_cv_path_BASH+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   case $BASH in
+-  [\\/]* | ?:[\\/]*)
++  [\\/]* | ?:[\\/]* | bash)
+   ac_cv_path_BASH="$BASH" # Let the user override the test with a path.
+   ;;
+   *)
+@@ -4016,7 +4016,7 @@ if ${ac_cv_path_XMLLINT+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   case $XMLLINT in
+-  [\\/]* | ?:[\\/]*)
++  [\\/]* | ?:[\\/]* | xmllint)
+   ac_cv_path_XMLLINT="$XMLLINT" # Let the user override the test with a path.
+   ;;
+   *)
+@@ -4059,7 +4059,7 @@ if ${ac_cv_path_XSLTPROC+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   case $XSLTPROC in
+-  [\\/]* | ?:[\\/]*)
++  [\\/]* | ?:[\\/]* | xsltproc)
+   ac_cv_path_XSLTPROC="$XSLTPROC" # Let the user override the test with a path.
+   ;;
+   *)
+@@ -4477,7 +4477,7 @@ if ${ac_cv_path_GREP+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   case $GREP in
+-  [\\/]* | ?:[\\/]*)
++  [\\/]* | ?:[\\/]* | grep)
+   ac_cv_path_GREP="$GREP" # Let the user override the test with a path.
+   ;;
+   *)
+@@ -4520,7 +4520,7 @@ if ${ac_cv_path_SED+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   case $SED in
+-  [\\/]* | ?:[\\/]*)
++  [\\/]* | ?:[\\/]* | sed)
+   ac_cv_path_SED="$SED" # Let the user override the test with a path.
+   ;;
+   *)
+diff --git a/xmlto.in b/xmlto.in
+index aed5458..66bb4fa 100755
+--- a/xmlto.in
++++ b/xmlto.in
+@@ -17,13 +17,13 @@
+ # along with this program; if not, see <http://www.gnu.org/licenses/>.
+ 
+ # Utilities that we need that aren't everywhere
+-FIND=@FIND@     # This must be GNU find (need -maxdepth)
+-MKTEMP=@MKTEMP@ # See http://www.mktemp.org if missing on your system
+-BASH=@BASH@     # GNU bash, for running the format scripts
+-GETOPT=@GETOPT@ # a getopt that supports --longoptions
+-TAIL=@TAIL@     # a tail that supports -n (posix)
+-GREP=@GREP@     # GNU grep, for searching patterns
+-SED=@SED@       # GNU sed, for modification of patterns
++FIND="@FIND@"     # This must be GNU find (need -maxdepth)
++MKTEMP="@MKTEMP@" # See http://www.mktemp.org if missing on your system
++BASH="@BASH@"     # GNU bash, for running the format scripts
++GETOPT="@GETOPT@" # a getopt that supports --longoptions
++TAIL="@TAIL@"     # a tail that supports -n (posix)
++GREP="@GREP@"     # GNU grep, for searching patterns
++SED="@SED@"      # GNU sed, for modification of patterns
+ 
+ version () {
+   echo "@PACKAGE@ version @VERSION@"
