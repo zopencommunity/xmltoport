@@ -1,8 +1,8 @@
 export VERSION="0.0.28"
-export ZOPEN_TARBALL_URL="https://releases.pagure.org/xmlto/xmlto-$VERSION.tar.gz"
-export ZOPEN_TARBALL_DEPS="make zoslib bash grep"
 export ZOPEN_TYPE="TARBALL"
-export ZOPEN_EXTRA_CONFIGURE_OPTS="BASH=\"/bin/env bash\" SED=\"/bin/env sed\" GREP=\"/bin/env grep\""
+export ZOPEN_TARBALL_URL="https://releases.pagure.org/xmlto/xmlto-$VERSION.tar.gz"
+export ZOPEN_TARBALL_DEPS="make zoslib bash grep getopt diffutils"
+export ZOPEN_EXTRA_CONFIGURE_OPTS="BASH=\"bash\" SED=\"sed\" GREP=\"grep\" XMLLINT=\"xmllint\" XSLTPROC=\"xsltproc\""
 
 zopen_check_results()
 {
